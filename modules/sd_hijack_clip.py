@@ -129,7 +129,7 @@ class FrozenCLIPEmbedderWithCustomWordsBase(torch.nn.Module):
             while position < len(tokens):
                 token = tokens[position]
 
-                if token == self.comma_token:
+                if token == self.comma_token: # "," == 267
                     last_comma = len(chunk.tokens)
 
                 # this is when we are at the end of alloted 75 tokens for the current chunk, and the current token is not a comma. opts.comma_padding_backtrack
