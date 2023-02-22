@@ -155,11 +155,11 @@ if __name__ == "__main__":
     sd = StableDiffusion(modelPath='./models/Stable-diffusion/chillout/chilloutmix_NiCkpt.ckpt',
                         vaepath="./models/VAE/vae-ft-mse-840000-ema-pruned.safetensors")
     sd.init()
-    sd.text2img(prompt="masterpiece,best quality  <lora:ym_v5:0.66>",
+    sd.text2img(prompt="masterpiece,best quality <lora:ym_v5:0.66>",
                 negative_prompt='nsfw,lowers,bad anatomy, bad hands, text,error,missing fingers,\
                                 extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,\
                                 signature,watermark,username,blurry',
-                savePath='./testttt',
+                savePath='./testttt.jpg',
                 samplemethod = 'Euler a',
                 seed=10,
                 steps=20,
